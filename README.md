@@ -5,9 +5,13 @@ The whole interface will have a great looking UI with the help Home Assistant( a
 .......................................................
 
 ||Install the Software ||
-You need to install the software. This information is taken from the site: https://home-assistant.io/getting-started/installa...
 
-connect to your pie and enter the following to get the latest rasbian image:
+![rpi](https://user-images.githubusercontent.com/32539405/31984678-06041126-b980-11e7-96a6-4ac37b1aad0f.jpg)
+
+
+You need to install the software. 
+
+Connect to your pi and enter the following to get the latest rasbian image:
 
 $ sudo apt-get update
 
@@ -178,4 +182,4 @@ Once restarted you can go back to your home assistant web page http://<ip addres
 
 Now notice you two LED's are now accessible
 
-
+|| This information is taken from the site: https://home-assistant.io/getting-started/installa...  ||
