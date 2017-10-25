@@ -1,0 +1,126 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 28.499260028
+  longitude: 77.161368077
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 265.40
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Kolkata
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+   api_password: dadada
+  # Uncomment this if you are using SSL or running in Docker etc
+   base_url: pinaka.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+light :
+      platform: mqtt
+      name: Light 1
+      state_topic: 'office/light1/status'
+      command_topic: 'office/light1/switch'
+      optimistic: false
+
+light 2:
+      platform: mqtt
+      name: Light 2
+      state_topic: 'office/light2/status'
+      command_topic: 'office/light2/switch'
+      optimistic: false
+
+light 3:
+      platform: mqtt
+      name: Light 3
+      state_topic: 'office/light3/status'
+      command_topic: 'office/light3/switch'
+      optimistic: false
+
+
+light 4:
+      platform: mqtt
+      name: Light 4
+      state_topic: 'office/light4/status'
+      command_topic: 'office/light4/switch'
+      optimistic: false
+
+light 5:
+      platform: mqtt
+      name: Chandelier
+      state_topic: 'office/light5/status'
+      command_topic: 'office/light5/switch'
+      optimistic: false
+
+
+
+light 6:
+      platform: mqtt
+      name: Small Curtain
+      state_topic: 'office/light6/status'
+      command_topic: 'office/light6/switch'
+      optimistic: false
+
+
+
+light 7:
+      platform: mqtt
+      name: Some Random Light
+      state_topic: 'office/light7/status'
+      command_topic: 'office/light7/switch'
+      optimistic: false
+      
+
+# Weather Prediction
+sensor:
+  platform: yr
+  
+sensor 2:
+  platform: cpuspeed
+  name: CPU
+
+# Text to speech
+tts:
+  platform: google
+
+group: !include groups.yaml
+# automation: !include automations.yaml
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+    waypoints: True
+    waypoint_whitelist:
+      - jon
+      - ram
