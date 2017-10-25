@@ -182,4 +182,4 @@ Once restarted you can go back to your home assistant web page http://<ip addres
 
 Now notice you two LED's are now accessible
 
-|| This information is taken from the site: https://home-assistant.io/getting-started/installa...  ||
+|| This information is taken from the site: https://home-assistant.io/docs/installation/raspberry-pi/ ||
